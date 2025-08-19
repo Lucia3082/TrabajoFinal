@@ -1,0 +1,338 @@
+/*vamos a arrancar la primera linea de css con el indicador universal
+etiqueta:llama a la etiqueta directamente por el nombre.
+clase: EN HTML USO class (atributo) EN CSS USO .(nombre de clase)
+utilizo el background-color: color de fondo
+background:fondo de cualquier caja.
+font-family:la familia de la fuente.
+color:cambia el color de cualquier estructura.
+font-size:cambio tamano a la fuente.
+font-weight:ancho de la fuente.
+font-style:cambia el estilo de la fuente. 
+border: aplica bordes a las cajas. Propiedades:
+border-width: ancho del borde. valores px,em,hv
+border-style: estilo del borde. Valores: solid, double, dotted, dashed.
+border-color: color del borde.
+border-radius: redondea los bordes de la caja. Valores px etc.
+width: ancho de cualquier elemento o caja.
+height: alto del elemento o caja. Valores pixeles, %, em, hv,
+max-width: ancho maximo que puedo darle a una caja.
+text-align: alinear los elementos en el eje horizontal. Valores: left, center, right.
+text-decoration: le da un subrayado al texto, le agrega linea. Valores: underline, none,
+line trought, overline.
+text-transform: transforma de mayuscula a minuscula y viceversa.
+Valores: uppercase, lowercase.
+Fuente externa para agregar a mi diseño: usamos google fonts. Copiamos el código
+box-sizing: contiene el tamaño de las cajas al tomar la suma del padding o del margin.
+Tiene dos valores: content-box y border-box
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Roboto+Flex:opsz,wght@8..144,100..1000&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    padding: 0; /*Con esto reseteo la configuración de los navegadores*/
+    margin: 0; /*Con esto reseteo la configuración de los navegadores*/
+    font-family: "Roboto", "PT Serif";
+    box-sizing:border-box ; /*contiene el ancho (width) y alto (height) de la caja
+    adhiriendo el margin y el padding*/
+    }
+
+  body{
+  background-color: #f4f0eb;
+  color:rgb(72, 43, 43) ;
+  padding: 20px;
+  }
+
+  header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(255, 201, 210);
+    width: 100%;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+    gap: 1.5em;
+    }
+
+  .titulo-header{
+    text-align: center;
+    text-decoration: underline;
+    text-shadow: 4px 4px 8px black;
+    max-width: 400px;
+  }
+
+  .logo-empresa {
+    width: 280px;
+    height: auto;
+    border-radius: 0.8em;
+    text-align: center;
+    flex: 0 0 200px;
+  }
+
+  .form-login {
+    max-width: 200px;
+    font-size: 0.8em;
+  }
+
+ .form-login .form-label {
+font-size: 0.9em;
+ }
+
+ .form-login .form-text {
+  font-size: 0.9em;
+ }
+ 
+ .form-login input {
+  font-size: small;
+ }
+
+ .form-login button {
+  padding: 0.3em 0.8em;
+  font-size: 0.9em;
+ }
+
+  main{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 1.4rem;
+    gap: 1em;
+    border: 2px solid #ccc;
+    margin: 0 auto;
+    width: 95%;
+    margin-bottom: 10px;
+    }
+
+    main section,
+    main article,
+    main nav{
+      border: 1px solid grey;
+      padding: 1.25em;
+    }
+
+
+.secciones {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 1em;
+}
+
+ .secciones section{
+      flex: 1 1 48%;
+      min-height: 400px;
+      box-sizing: border-box;
+      gap: 1em;
+      padding: 1em;
+      border: 1px solid cadetblue;
+    }
+
+    .article-asociate{
+      width: 98%;
+      padding: 1.25em;
+      margin: 1em auto;
+    }
+
+  nav{
+    border: 10px;
+    padding: 20;
+    margin: 10px 0;
+    background-color: #ccc;
+    }
+
+    .card-img {
+      height: 450px;
+      overflow: hidden;
+    }
+
+    .img-card {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  
+    label {
+    font-family:Arial, Helvetica, sans-serif ;
+    color:cornflowerblue;
+    font-weight:lighter;
+    }
+    
+    input{
+    
+      color:rgb(59, 2, 2);  
+    }
+     
+    legend {
+    font-size: 38px;
+    font-style: normal;
+    
+    }
+
+
+    .menu1{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    list-style-type: none;
+    padding: 0;
+    gap: 1em;
+    }
+
+    nav .menu1 li{
+      background-color: #f4f0eb;
+      width: 10em;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    nav .menu1 li a{
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    text-align: center;
+    font-weight: 500;
+    transition: color 0.8s ease;
+    }
+
+    .menu1 li a:hover{
+      color: aqua;
+    }
+
+     .info-ipfl {
+      display: flex;
+      border: 1px solid black;
+      border-radius: 10px;
+      background-color: #f9f9f9;
+      padding: 1em;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 1em;
+    }
+
+    .ipfl-logo {
+      flex: 1 0 250px;
+      max-width: 300px;
+      border-radius: 10px;
+      box-shadow: 0px 2px 5px rgb(0,0,0.1);
+      padding: 1em;
+    }
+
+    .info-ipfl p{
+      flex: 1 1 300px;
+      color: #333;
+    }
+
+
+    .card-img-top {
+      width: 100%;
+      height: auto;
+    }
+
+    .logoCoop {
+      width: auto;
+      height: auto;
+    }
+
+    .botones {
+      border-width: 2px;
+      border-style: solid;
+      border-color: red;
+    }
+
+    .galeria {
+    border: 4px solid aquamarine;
+    width: 95%;
+    margin: 0 auto;
+    text-align: center;
+    }
+
+    footer{
+    width: 90%;
+    margin: 0 auto;
+    }
+
+    .formulario{
+    border-color: palevioletred;
+    border-width: 4px;
+    border-style: solid;
+    border-radius: 6px;
+    }
+
+    .form-columns{
+      display: flex;
+      justify-content: space-between;
+    }
+
+    footer{
+    width: 100%;
+}
+.formulario{
+    border-color: rgb(82, 72, 92);
+    border-width: 4px;
+    border-style: solid;
+    border-radius: 8px;
+}
+legend {
+    font-size: 25px;
+    font-style: italic;
+}
+.form-columns{
+    display: flex;
+    flex-direction: column;
+}
+.fila div{
+    width: 35%;
+    display: flex;
+}
+.fila div label{
+    flex: 1 1 15%;
+}
+.fila div input{
+    flex: 1 1 50%;
+}
+.fila{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 0.9rem;
+}
+.form-file{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0.9rem;
+}
+.form-file *{
+    margin: 0 1rem;
+}
+.form-comments label{
+    display: block;
+    justify-self: center;
+}
+.form-comments textarea{
+    width: 75%;
+    height: 12rem;
+    margin: 0 auto;
+    display: block;
+}
+.form-buttons{
+    justify-self: right;
+    margin-top: 1rem;
+}
+.form-buttons input{
+    padding: 0.1rem;
+    font-weight: 500;
+}
+.form-buttons input:hover{
+    color: white;
+    background-color: #333333;
+}
+label{
+    font-family: "Krub", Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: rgb(0, 0, 0);
+    font-weight: 400;
+}
+input{
+    color: rgb(0, 0, 0);
+    font-weight: 600;
+}

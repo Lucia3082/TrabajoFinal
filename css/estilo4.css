@@ -1,0 +1,162 @@
+/*
+flex-direction: define el eje de la dirección del eje, para marcar el
+flujo de las cajas.
+Valores: row: filas. Valor predeterminado.
+         column: columnas.
+justify-content: alinea las cajas en el eje principal.
+Valores: center, flex-start, flex-end, space-between (espacio entre cajas), 
+space-around (espacio entre cajas y bordes), 
+space-evenly (espacio entre cajas y bordes todos iguales)
+flex-wrap: crea una nueva linea, cuando la suma del ancho de las cajas supera al ancho del
+contenedor. Valores: wrap, wrap-reverse, nowrap (viene por defecto).
+align-content: ordena las cajas en el eje cruzado al eje principal:
+Requisitos para que funcione: 1- flex-rap tiene que estar activo.
+2- tiene que ser en casos de multifilas o multicolumnas
+
+*/
+
+
+
+
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    padding: 20px;
+}
+
+.principal {
+    background-color: #333;
+    color: antiquewhite;
+    text-align: center;
+    padding: 1em;
+    margin-bottom: 1em;
+}
+
+.contenedor{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8em;
+    padding: 1.5em;
+    background-color: #e0f7fa;
+    height: auto;
+
+}
+
+.caja1{flex: 1;
+background-color: red;
+}
+
+.caja2{flex: 2;
+background-color: blueviolet;}
+
+.caja3 {flex: 1;
+background-color: blue;
+}
+
+.caja4 {flex: 3;
+    background-color: green;
+}
+
+.caja5 {flex: 1;
+    background-color: #333;
+    color: white;
+}
+
+.contenedor div {
+    padding: 1.4em;
+    text-align: center;
+    min-width: 150px;
+}
+
+@media (max-width:600px)
+{
+.contenedor .caja4 {
+    order: -1;
+    background-color: ec407a;
+}
+
+.contenedor .caja5 {
+    display: none;
+}
+
+}
+
+
+
+/*
+.contenedor div {
+    background-color: #7cb;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    flex: 0 1 150px;
+}
+*/
+
+
+
+/* SEGUNDO EJEMPLO
+@media (min-width: 601px) and (max-width: 1020px)
+
+{
+
+.contenedor{
+height: auto;
+}
+
+.contenedor div{
+flex: 1 1 45%;
+font-size: 1.4em;
+transform: scale(1.05);
+
+}
+
+}
+
+@media (max-width:600px)
+{
+.contenedor {
+    flex-direction: column;
+    background-color: #e57373;
+}
+.contenedor div {
+width: 100%;
+color: black;
+font-size: 1.2em;
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+}
+*/
+
+/* PRIMER EJEMPLO
+.contenedor div{
+    flex: 1 1 200px;
+    background-color: #006064;
+    color: white;
+    padding: 1.5em;
+    text-align: center;
+    width: 200px;
+
+}
+
+/*Responsive: comienza con una media query: @media (y aquí pondremos la orden del tamaño)
+
+@media (max-width: 600px)
+{
+.contenedor{ background-color: #f2d06b; }
+.contenedor div {
+    flex: 1 1 100%;
+    background-color: cadetblue;
+    color: black;
+    font-size: 1.2em;
+    transform: scale(1.1);
+}
+
+}
+*/
